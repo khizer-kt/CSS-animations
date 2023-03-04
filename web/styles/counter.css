@@ -1,0 +1,77 @@
+
+.bg{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(
+    to top,
+    rgb(83, 130, 124) 0%,
+    rgb(83, 130, 124) 25%,
+    rgb(25, 98, 155) 25%,
+    rgb(25, 98, 155) 100%
+);
+
+}
+.pain{
+    position: relative;
+    left: 115px;
+    top: 85px;
+}
+
+.count-numbers {
+    animation: count-numbers 10s linear infinite forwards;
+    background-color: rgb(25, 98, 155);
+    counter-reset: count 0;
+}
+
+.count-numbers::before {
+    color: #000;
+    content: counter(count);
+    font-size: 5rem;
+}
+
+@keyframes count-numbers {
+    0% {
+      counter-increment: count 0;
+    }
+
+    10% {
+      counter-increment: count 1;
+    }
+
+    20% {
+      counter-increment: count 2;
+    }
+
+    30% {
+      counter-increment: count 3;
+    }
+
+    40% {
+      counter-increment: count 4;
+    }
+
+    50% {
+      counter-increment: count 5;
+    }
+
+    60% {
+      counter-increment: count 6;
+    }
+
+    70% {
+      counter-increment: count 7;
+    }
+
+    80% {
+      counter-increment: count 8;
+    }
+
+    90% {
+      counter-increment: count 9;
+    }
+
+    100% {
+      counter-increment: count 10;
+    }
+}

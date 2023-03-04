@@ -1,0 +1,116 @@
+.bg{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(
+    to top,
+    rgb(83, 130, 124) 0%, 
+    rgb(83, 130, 124) 25%, 
+    rgb(25, 98, 155) 25%,
+    rgb(25, 98, 155) 100% 
+); 
+}
+.pain{
+  transform: scale(1.1,1);
+}
+
+.pacman-container {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: scale(.5);
+}
+
+.pacman {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    top: 50%;
+    left: -90px; 
+    margin-top: -50px;
+    margin-left: -50px; 
+    background: conic-gradient(rgb(255, 255, 0) 55deg, transparent 0 125deg, rgb(255, 255, 0) 0);
+    animation: mouth 0.5s ease-out infinite;
+  }
+
+.ball-container {
+    display: flex;
+    height: 100vh;
+    display: grid;
+    margin-top: -30px;
+    margin-left: 210px;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 20px;
+    width: 100px;
+    height: 100px;
+  }
+
+.dot {
+    width: 20px;
+    height: 20px;
+    position:relative;
+    left:-200px;
+    top: 35px;
+    border-radius: 50%;
+    background-color: #010101;
+    animation: eating-path 0.5s linear infinite;
+  }
+
+  @keyframes eating-path {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+  @keyframes mouth {
+    0%, 50% { background: conic-gradient(rgb(255, 255, 0) 55deg, transparent 0 125deg, rgb(255, 255, 0) 0); }
+    25% { background: conic-gradient(rgb(255, 255, 0) 55deg, rgb(255, 255, 0) 0);}
+  }
+
+  .eye{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    top: 50%;
+    left: 80%; 
+    margin-top: -50px;
+    margin-left: -50px; 
+}
+
+@keyframes yum-animation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.yum{
+  font-size: 48px;
+  font-weight: bold;
+  font-family: 'Shantell Sans', cursive;
+  text-align: center;
+  animation-name: yum-animation;
+  animation-duration: .75s;
+  animation-iteration-count: infinite;
+  position: relative;
+  left: 150px;
+  top: -50px;
+}
