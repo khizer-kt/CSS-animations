@@ -1,0 +1,50 @@
+.pain{
+    transform: scale(1.1,1);
+}
+.bg{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(
+    to top,
+    rgb(83, 130, 124) 0%,
+    rgb(83, 130, 124) 25%,
+    rgb(25, 98, 155) 25%,
+    rgb(25, 98, 155) 100%
+);
+
+}
+
+.ball {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+background-color: rgb(255, 255, 255);
+position: relative;
+margin-top: 200px;
+animation: bounce 7s linear infinite;
+}
+
+@keyframes bounce {
+0% {
+  top: 0;
+  left:0;
+}
+25% {
+  top: -85px;
+  left:50px;
+}
+50%{
+  top: 0;
+  left: 100px;
+}
+75% {
+  top: -45px;
+  left: 200px;
+}
+100% {
+  top: 0;
+  left: 300px;
+}
+
+}
